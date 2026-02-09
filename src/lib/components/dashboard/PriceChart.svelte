@@ -24,19 +24,19 @@
 				horzLines: { color: 'rgba(255,255,255,0.03)' }
 			},
 			crosshair: {
-				vertLine: { color: 'rgba(139,92,246,0.3)', labelBackgroundColor: '#8b5cf6' },
-				horzLine: { color: 'rgba(139,92,246,0.3)', labelBackgroundColor: '#8b5cf6' }
+				vertLine: { color: 'rgba(249,115,22,0.3)', labelBackgroundColor: '#f97316' },
+				horzLine: { color: 'rgba(249,115,22,0.3)', labelBackgroundColor: '#f97316' }
 			},
 			rightPriceScale: { borderVisible: false },
 			timeScale: { borderVisible: false, timeVisible: true }
 		});
 
 		lineSeries = chart.addLineSeries({
-			color: '#8b5cf6',
+			color: '#f97316',
 			lineWidth: 2,
 			crosshairMarkerRadius: 4,
-			crosshairMarkerBorderColor: '#8b5cf6',
-			crosshairMarkerBackgroundColor: '#0a0a0f',
+			crosshairMarkerBorderColor: '#f97316',
+			crosshairMarkerBackgroundColor: '#0a0e1a',
 			priceFormat: { type: 'price', precision: 6, minMove: 0.000001 }
 		});
 

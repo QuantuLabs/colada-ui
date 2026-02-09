@@ -22,7 +22,7 @@
 	{#if next}
 		<div class="hidden sm:flex items-center gap-2 text-xs text-text-muted">
 			<div class="w-20 h-1.5 rounded-full bg-white/10 overflow-hidden">
-				<div class="h-full rounded-full bg-accent-purple transition-all" style="width: {Math.min(progress, 100)}%"></div>
+				<div class="h-full rounded-full bg-accent-orange transition-all" style="width: {Math.min(progress, 100)}%"></div>
 			</div>
 			<span>Next: {next.name}</span>
 		</div>

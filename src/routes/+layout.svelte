@@ -46,8 +46,8 @@
 	<nav class="border-b border-border-default px-6 py-3 flex items-center justify-between backdrop-blur-xl bg-bg-primary/80 sticky top-0 z-30">
 		<div class="flex items-center gap-8">
 			<a href="/dashboard" class="flex items-center gap-2">
-				<div class="w-8 h-8 rounded-lg bg-gradient-to-br from-accent-purple to-accent-cyan flex items-center justify-center font-bold text-sm">P</div>
-				<span class="text-lg font-bold gradient-text">Percolator</span>
+				<div class="w-8 h-8 rounded-lg bg-gradient-to-br from-accent-orange to-accent-teal flex items-center justify-center font-bold text-sm">C</div>
+				<span class="text-lg font-bold gradient-text">Colada</span>
 			</a>
 			<div class="hidden md:flex items-center gap-1">
 				{#each navItems as item}
@@ -71,7 +71,7 @@
 			{@const isActive = $page.url.pathname.startsWith(item.href)}
 			<a
 				href={item.href}
-				class="flex flex-col items-center gap-1 px-3 py-1 text-xs transition-colors {isActive ? 'text-accent-purple' : 'text-text-muted'}"
+				class="flex flex-col items-center gap-1 px-3 py-1 text-xs transition-colors {isActive ? 'text-accent-orange' : 'text-text-muted'}"
 			>
 				<item.icon size={18} />
 				{item.label}

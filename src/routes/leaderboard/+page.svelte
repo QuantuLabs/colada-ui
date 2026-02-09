@@ -51,7 +51,7 @@
 </script>
 
 <svelte:head>
-	<title>Leaderboard | Percolator</title>
+	<title>Leaderboard | Colada</title>
 </svelte:head>
 
 <div class="space-y-6">
@@ -100,7 +100,7 @@
 								{/if}
 							</td>
 							<td class="p-4">
-								<a href="/agent/{trader.agentNft.toBase58()}" class="font-mono text-xs hover:text-accent-purple transition-colors">
+								<a href="/agent/{trader.agentNft.toBase58()}" class="font-mono text-xs hover:text-accent-orange transition-colors">
 									{shortenAddress(trader.agentNft.toBase58(), 6)}
 								</a>
 							</td>

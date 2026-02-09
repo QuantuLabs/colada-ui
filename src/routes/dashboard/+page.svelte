@@ -10,7 +10,7 @@
 </script>
 
 <svelte:head>
-	<title>Dashboard | Percolator</title>
+	<title>Dashboard | Colada</title>
 </svelte:head>
 
 <div class="space-y-6">

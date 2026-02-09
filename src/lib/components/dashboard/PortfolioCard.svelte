@@ -41,7 +41,7 @@
 				<div class="flex items-center justify-between">
 					<div>
 						<p class="text-text-muted text-xs">Pending Fees</p>
-						<p class="font-mono text-accent-purple">{formatSol(feeVault.pendingFees)} SOL</p>
+						<p class="font-mono text-accent-orange">{formatSol(feeVault.pendingFees)} SOL</p>
 					</div>
 					<div>
 						<p class="text-text-muted text-xs">Total Claimed</p>

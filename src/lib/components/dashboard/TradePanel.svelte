@@ -187,7 +187,7 @@
 			{#if txResult.error}
 				<p class="text-loss">{txResult.error}</p>
 			{:else}
-				<a href={getExplorerUrl(txResult.sig)} target="_blank" rel="noopener" class="text-accent-purple hover:underline">
+				<a href={getExplorerUrl(txResult.sig)} target="_blank" rel="noopener" class="text-accent-orange hover:underline">
 					View transaction
 				</a>
 			{/if}

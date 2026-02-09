@@ -40,7 +40,7 @@
 </script>
 
 <svelte:head>
-	<title>Agent {shortenAddress(agentId)} | Percolator</title>
+	<title>Agent {shortenAddress(agentId)} | Colada</title>
 </svelte:head>
 
 <div class="max-w-2xl mx-auto space-y-6">
@@ -66,7 +66,7 @@
 			<div class="grid grid-cols-2 gap-4">
 				<div>
 					<p class="text-xs text-text-muted">Pending Fees</p>
-					<p class="text-xl font-mono font-bold text-accent-purple">{formatSol(feeVault.pendingFees)} SOL</p>
+					<p class="text-xl font-mono font-bold text-accent-orange">{formatSol(feeVault.pendingFees)} SOL</p>
 				</div>
 				<div>
 					<p class="text-xs text-text-muted">Total Claimed</p>

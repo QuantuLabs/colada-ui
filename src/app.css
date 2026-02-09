@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-	--color-bg-primary: #0a0a0f;
-	--color-bg-card: #12121a;
-	--color-bg-card-hover: #1a1a24;
+	--color-bg-primary: #0a0e1a;
+	--color-bg-card: #111827;
+	--color-bg-card-hover: #1a2234;
 	--color-border-default: rgba(255, 255, 255, 0.08);
 	--color-border-hover: rgba(255, 255, 255, 0.15);
-	--color-accent-purple: #8b5cf6;
-	--color-accent-cyan: #06b6d4;
+	--color-accent-orange: #f97316;
+	--color-accent-teal: #14b8a6;
 	--color-profit: #22c55e;
 	--color-loss: #ef4444;
 	--color-text-primary: #f1f5f9;
@@ -27,7 +27,7 @@ html, body {
 }
 
 .gradient-text {
-	background: linear-gradient(135deg, var(--color-accent-purple), var(--color-accent-cyan));
+	background: linear-gradient(135deg, var(--color-accent-orange), var(--color-accent-teal));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
@@ -36,7 +36,7 @@ html, body {
 .gradient-border {
 	border: 1px solid transparent;
 	background-image: linear-gradient(var(--color-bg-card), var(--color-bg-card)),
-		linear-gradient(135deg, var(--color-accent-purple), var(--color-accent-cyan));
+		linear-gradient(135deg, var(--color-accent-orange), var(--color-accent-teal));
 	background-origin: border-box;
 	background-clip: padding-box, border-box;
 }
@@ -54,7 +54,7 @@ html, body {
 }
 
 .btn-primary {
-	background: linear-gradient(135deg, var(--color-accent-purple), var(--color-accent-cyan));
+	background: linear-gradient(135deg, var(--color-accent-orange), var(--color-accent-teal));
 	color: white;
 	padding: 0.625rem 1.5rem;
 	border-radius: 0.75rem;
@@ -107,7 +107,7 @@ html, body {
 }
 
 .input-field:focus {
-	border-color: var(--color-accent-purple);
+	border-color: var(--color-accent-orange);
 }
 
 .badge {

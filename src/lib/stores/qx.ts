@@ -17,10 +17,10 @@ export interface FeeTier {
 
 export const FEE_TIERS: FeeTier[] = [
 	{ name: 'Base', discount: 0, minBalance: 0n, color: '#64748b' },
-	{ name: 'Holder', discount: 5, minBalance: 1n, color: '#8b5cf6' },
+	{ name: 'Holder', discount: 5, minBalance: 1n, color: '#f97316' },
 	{ name: 'Silver', discount: 10, minBalance: 1_000_000_000_000n, color: '#94a3b8' },
 	{ name: 'Gold', discount: 20, minBalance: 10_000_000_000_000n, color: '#eab308' },
-	{ name: 'Diamond', discount: 30, minBalance: 100_000_000_000_000n, color: '#06b6d4' }
+	{ name: 'Diamond', discount: 30, minBalance: 100_000_000_000_000n, color: '#14b8a6' }
 ];
 
 export const currentTier = derived(qxBalance, ($bal) => {

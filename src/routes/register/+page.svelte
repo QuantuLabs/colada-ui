@@ -61,7 +61,7 @@
 </script>
 
 <svelte:head>
-	<title>Register | Percolator</title>
+	<title>Register | Colada</title>
 </svelte:head>
 
 <div class="max-w-lg mx-auto space-y-6">
@@ -73,7 +73,7 @@
 	<div class="flex items-center justify-center gap-4 mb-8">
 		{#each [1, 2] as s}
 			<div class="flex items-center gap-2">
-				<div class="w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium {step >= s ? 'bg-accent-purple text-white' : 'bg-white/10 text-text-muted'}">
+				<div class="w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium {step >= s ? 'bg-accent-orange text-white' : 'bg-white/10 text-text-muted'}">
 					{#if step > s}
 						<CheckCircle size={16} />
 					{:else}
@@ -139,7 +139,7 @@
 			<p class="text-text-primary font-medium mb-2">Registration Complete</p>
 			<p class="text-text-muted text-sm mb-4">Your agent NFT has been minted.</p>
 			{#if txSig}
-				<a href={getExplorerUrl(txSig)} target="_blank" rel="noopener" class="text-accent-purple text-sm hover:underline block mb-4">
+				<a href={getExplorerUrl(txSig)} target="_blank" rel="noopener" class="text-accent-orange text-sm hover:underline block mb-4">
 					View transaction
 				</a>
 			{/if}

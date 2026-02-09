@@ -10,13 +10,13 @@
 </script>
 
 <svelte:head>
-	<title>$QX Staking | Percolator</title>
+	<title>$QX Staking | Colada</title>
 </svelte:head>
 
 <div class="max-w-2xl mx-auto space-y-6">
 	<div class="text-center">
 		<h1 class="text-2xl font-bold gradient-text mb-2">$QX Token</h1>
-		<p class="text-text-muted text-sm">Stake $QX for fee discounts and protocol rewards</p>
+		<p class="text-text-muted text-sm">Stake $QX for fee discounts and Colada rewards</p>
 	</div>
 
 	{#if !$walletStore.connected}
@@ -36,7 +36,7 @@
 				</div>
 				<div class="text-right">
 					<p class="text-xs text-text-muted">Fee Discount</p>
-					<p class="text-xl font-bold text-accent-purple">-{tier.discount}%</p>
+					<p class="text-xl font-bold text-accent-orange">-{tier.discount}%</p>
 				</div>
 			</div>
 
@@ -47,7 +47,7 @@
 						<span>{next.name} (-{next.discount}%)</span>
 					</div>
 					<div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
-						<div class="h-full rounded-full bg-gradient-to-r from-accent-purple to-accent-cyan transition-all" style="width: {Math.min(Number($qxBalance) / Number(next.minBalance) * 100, 100)}%"></div>
+						<div class="h-full rounded-full bg-gradient-to-r from-accent-orange to-accent-teal transition-all" style="width: {Math.min(Number($qxBalance) / Number(next.minBalance) * 100, 100)}%"></div>
 					</div>
 					<p class="text-xs text-text-muted mt-1">
 						{balance.toFixed(2)} / {(Number(next.minBalance) / 1e9).toFixed(0)} $QX
@@ -92,8 +92,8 @@
 
 		<!-- Coming Soon -->
 		<div class="card p-5 text-center">
-			<h3 class="text-sm text-text-muted mb-2">Revenue Share Pool</h3>
-			<p class="text-xs text-text-muted">Coming in V1.1 — Stake $QX to earn a share of protocol fees</p>
+			<h3 class="text-sm text-text-muted mb-2">Colada Revenue Pool</h3>
+			<p class="text-xs text-text-muted">Coming soon — Stake $QX to earn a share of Colada fees</p>
 		</div>
 	{/if}
 </div>
