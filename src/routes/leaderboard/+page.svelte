@@ -55,12 +55,12 @@
 </svelte:head>
 
 <div class="space-y-6">
-	<div class="flex items-center justify-between">
+	<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
 		<h1 class="text-2xl font-bold gradient-text flex items-center gap-2">
 			<Trophy size={24} />
 			Leaderboard
 		</h1>
-		<div class="flex gap-1 p-1 rounded-xl bg-white/5">
+		<div class="flex gap-1 p-1 rounded-xl bg-white/5 self-start sm:self-auto">
 			{#each (['pnl', 'trades', 'fees'] as const) as s}
 				<button
 					onclick={() => sortBy = s}
@@ -77,7 +77,7 @@
 	{:else if sorted.length === 0}
 		<div class="card p-8 text-center text-text-muted">No active traders</div>
 	{:else}
-		<div class="card overflow-hidden">
+		<div class="card overflow-x-auto">
 			<table class="w-full text-sm">
 				<thead>
 					<tr class="border-b border-border-default text-text-muted text-xs">

@@ -66,12 +66,12 @@
 </script>
 
 <div class="card p-4">
-	<div class="flex items-center justify-between mb-4">
+	<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
 		<div>
 			<h3 class="text-text-muted text-sm">Price</h3>
 			<div class="flex items-center gap-2">
-				<span class="text-2xl font-mono font-bold">{formatPrice(currentPrice)} SOL</span>
-				<span class="flex items-center gap-1 text-sm {isUp ? 'text-profit' : 'text-loss'}">
+				<span class="text-xl sm:text-2xl font-mono font-bold">{formatPrice(currentPrice)} SOL</span>
+				<span class="flex items-center gap-1 text-xs sm:text-sm {isUp ? 'text-profit' : 'text-loss'}">
 					{#if isUp}<TrendingUp size={14} />{:else}<TrendingDown size={14} />{/if}
 					{priceChange >= 0 ? '+' : ''}{priceChange.toFixed(6)}
 				</span>
@@ -79,7 +79,7 @@
 		</div>
 		<div class="flex items-center gap-2">
 			{#if $matcherStore}
-				<span class="badge badge-neutral">Spread: {$matcherStore.spreadBps} bps</span>
+				<span class="badge badge-neutral text-xs">Spread: {$matcherStore.spreadBps} bps</span>
 			{/if}
 		</div>
 	</div>

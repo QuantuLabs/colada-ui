@@ -15,24 +15,24 @@
 			<Wallet size={14} />
 			Portfolio
 		</h3>
-		<div class="grid grid-cols-2 gap-4">
+		<div class="grid grid-cols-2 gap-3 sm:gap-4">
 			<div>
 				<p class="text-text-muted text-xs">Balance</p>
-				<p class="text-xl font-mono font-bold">{formatSol(trader.depositedBalance)} SOL</p>
+				<p class="text-lg sm:text-xl font-mono font-bold">{formatSol(trader.depositedBalance)} SOL</p>
 			</div>
 			<div>
 				<p class="text-text-muted text-xs">Total PnL</p>
-				<p class="text-xl font-mono font-bold {trader.totalPnl >= 0n ? 'text-profit' : 'text-loss'}">
+				<p class="text-lg sm:text-xl font-mono font-bold {trader.totalPnl >= 0n ? 'text-profit' : 'text-loss'}">
 					{formatPnl(trader.totalPnl)}
 				</p>
 			</div>
 			<div>
 				<p class="text-text-muted text-xs">Trades</p>
-				<p class="text-lg font-mono">{trader.tradeCount}</p>
+				<p class="text-base sm:text-lg font-mono">{trader.tradeCount}</p>
 			</div>
 			<div>
 				<p class="text-text-muted text-xs">Fee Rate</p>
-				<p class="text-lg font-mono">{formatBps(trader.feeRateBps)}</p>
+				<p class="text-base sm:text-lg font-mono">{formatBps(trader.feeRateBps)}</p>
 			</div>
 		</div>
 

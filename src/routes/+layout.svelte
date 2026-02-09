@@ -43,7 +43,7 @@
 
 <div class="min-h-screen flex flex-col">
 	<!-- Nav -->
-	<nav class="border-b border-border-default px-6 py-3 flex items-center justify-between backdrop-blur-xl bg-bg-primary/80 sticky top-0 z-30">
+	<nav class="border-b border-border-default px-4 sm:px-6 py-3 flex items-center justify-between backdrop-blur-xl bg-bg-primary/80 sticky top-0 z-30">
 		<div class="flex items-center gap-8">
 			<a href="/dashboard" class="flex items-center gap-2">
 				<div class="w-8 h-8 rounded-lg bg-gradient-to-br from-accent-orange to-accent-teal flex items-center justify-center font-bold text-sm">C</div>

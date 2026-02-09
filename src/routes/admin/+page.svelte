@@ -91,10 +91,10 @@
 		<!-- Protocol Status -->
 		<div class="card p-5">
 			<h3 class="text-sm text-text-muted mb-4">Protocol Status</h3>
-			<div class="grid grid-cols-2 gap-4 text-sm mb-4">
+			<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm mb-4">
 				<div>
 					<p class="text-text-muted text-xs">Admin</p>
-					<p class="font-mono text-xs">{shortenAddress(config.admin.toBase58(), 6)}</p>
+					<p class="font-mono text-xs break-all">{shortenAddress(config.admin.toBase58(), 6)}</p>
 				</div>
 				<div>
 					<p class="text-text-muted text-xs">Status</p>

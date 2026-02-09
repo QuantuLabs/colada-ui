@@ -24,19 +24,19 @@
 	{:else}
 		<!-- Current Tier -->
 		<div class="gradient-border rounded-2xl p-5">
-			<div class="flex items-center justify-between mb-4">
-				<div class="flex items-center gap-3">
-					<div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: {tier.color}20;">
+			<div class="flex items-center justify-between gap-3 mb-4">
+				<div class="flex items-center gap-3 min-w-0">
+					<div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center shrink-0" style="background: {tier.color}20;">
 						<Shield size={24} style="color: {tier.color};" />
 					</div>
-					<div>
+					<div class="min-w-0">
 						<p class="text-xs text-text-muted">Current Tier</p>
-						<p class="text-xl font-bold" style="color: {tier.color};">{tier.name}</p>
+						<p class="text-lg sm:text-xl font-bold truncate" style="color: {tier.color};">{tier.name}</p>
 					</div>
 				</div>
-				<div class="text-right">
+				<div class="text-right shrink-0">
 					<p class="text-xs text-text-muted">Fee Discount</p>
-					<p class="text-xl font-bold text-accent-orange">-{tier.discount}%</p>
+					<p class="text-lg sm:text-xl font-bold text-accent-orange">-{tier.discount}%</p>
 				</div>
 			</div>
 
@@ -57,7 +57,7 @@
 		</div>
 
 		<!-- Balance -->
-		<div class="grid grid-cols-2 gap-4">
+		<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 			<div class="card p-5">
 				<p class="text-xs text-text-muted mb-1 flex items-center gap-1"><Coins size={12} /> Balance</p>
 				<p class="text-2xl font-mono font-bold">{balance.toFixed(2)}</p>
@@ -76,12 +76,12 @@
 			<div class="space-y-3">
 				{#each FEE_TIERS as t}
 					{@const isCurrent = t.name === tier.name}
-					<div class="flex items-center justify-between p-3 rounded-xl {isCurrent ? 'bg-white/5 border border-border-hover' : ''}">
-						<div class="flex items-center gap-3">
-							<div class="w-3 h-3 rounded-full" style="background: {t.color};"></div>
+					<div class="flex items-center justify-between gap-2 p-3 rounded-xl {isCurrent ? 'bg-white/5 border border-border-hover' : ''}">
+						<div class="flex items-center gap-3 min-w-0">
+							<div class="w-3 h-3 rounded-full shrink-0" style="background: {t.color};"></div>
 							<span class="text-sm {isCurrent ? 'text-text-primary font-medium' : 'text-text-muted'}">{t.name}</span>
 						</div>
-						<div class="flex items-center gap-4 text-sm">
+						<div class="flex items-center gap-2 sm:gap-4 text-xs sm:text-sm shrink-0">
 							<span class="text-text-muted font-mono">{Number(t.minBalance) === 0 ? 'Any' : `${(Number(t.minBalance) / 1e9).toLocaleString()} $QX`}</span>
 							<span class="font-medium" style="color: {t.color};">-{t.discount}%</span>
 						</div>

@@ -1,7 +1,10 @@
 <script lang="ts">
 	import { walletStore, connectWallet, disconnectWallet, type WalletAdapter } from '$lib/stores/wallet';
 	import { shortenAddress } from '$lib/utils/format';
-	import { LogOut, Wallet } from 'lucide-svelte';
+	import { LogOut, Wallet, Wrench } from 'lucide-svelte';
+	import { DevWallet } from '$lib/solana/dev-wallet';
+
+	const isDevMode = import.meta.env.VITE_DEV_WALLET === 'true';
 
 	let showDropdown = $state(false);
 	let detectedWallets = $state<any[]>([]);
@@ -48,6 +51,12 @@
 		showDropdown = false;
 	}
 
+	async function handleDevConnect() {
+		const devWallet = new DevWallet();
+		await connectWallet(devWallet);
+		showDropdown = false;
+	}
+
 	function handleDisconnect() {
 		disconnectWallet();
 		showDropdown = false;
@@ -66,9 +75,10 @@
 			<span class="font-mono">{shortenAddress($walletStore.publicKey.toBase58())}</span>
 		</button>
 	{:else}
-		<button onclick={toggleDropdown} class="btn-primary flex items-center gap-2 text-sm" disabled={$walletStore.connecting}>
+		<button onclick={toggleDropdown} class="btn-primary flex items-center gap-2 text-sm whitespace-nowrap" disabled={$walletStore.connecting}>
 			<Wallet size={16} />
-			{$walletStore.connecting ? 'Connecting...' : 'Connect Wallet'}
+			<span class="hidden sm:inline">{$walletStore.connecting ? 'Connecting...' : 'Connect Wallet'}</span>
+			<span class="sm:hidden">{$walletStore.connecting ? '...' : 'Connect'}</span>
 		</button>
 	{/if}
 
@@ -82,7 +92,14 @@
 					Disconnect
 				</button>
 			{:else}
-				{#if detectedWallets.length === 0}
+				{#if isDevMode}
+					<button onclick={handleDevConnect} class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-white/5 text-sm text-accent-orange">
+						<Wrench size={16} />
+						Dev Wallet
+					</button>
+					<div class="border-t border-white/10 my-1"></div>
+				{/if}
+				{#if detectedWallets.length === 0 && !isDevMode}
 					<p class="text-sm text-text-muted px-3 py-2">No wallets detected</p>
 				{/if}
 				{#each detectedWallets as wallet}
